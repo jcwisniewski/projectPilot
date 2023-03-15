@@ -8,4 +8,8 @@ const VideoController = require("./controllers/VideoController");
 routes.get("/videos", VideoController.index);
 routes.post("/videos", VideoController.store);
 
+routes.get("/", (res) => {
+  res.send("deu boa");
+});
+
 module.exports = routes;
