@@ -1,9 +1,8 @@
 require("dotenv").config();
-
-
 const express = require("express");
 const cors = require("cors");
 const routes = require("./routes");
+const connectToDataBase = require("./database");
 
 
 const app = express();
@@ -21,5 +20,5 @@ app.use(routes);
 app.listen(port, () => {
   console.log(`backend started at http://localhost:${port}`);
 });
-const connectToDataBase = require("./database");
+
 connectToDataBase();
