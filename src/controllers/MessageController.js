@@ -29,7 +29,12 @@ module.exports = {
     });
 
     try {    
-      const responseApi = await axios.post(url, request.body);
+      const headers = {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "http://localhost:3000", // Altere para a origem permitida
+      };
+
+      const responseApi = await axios.post(url, request.body, {headers});
       if(responseApi.data.success === true)
       {
         messages.save();        
