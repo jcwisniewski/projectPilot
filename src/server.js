@@ -9,8 +9,9 @@ const app = express();
 const port = 3333;
 
 const corsOptions = {
-  origin: ["http://localhost:3000/", "https://broadcast-messages.vercel.app/"],
+  origin: ["http://localhost:3000", "https://broadcast-messages.vercel.app"],
   credentials: true,
+  methods:['GET','PUT','POST','DELETE'],
   optionSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
