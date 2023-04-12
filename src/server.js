@@ -6,7 +6,7 @@ const connectToDataBase = require("./database");
 
 
 const app = express();
-const port = 3333;
+const port = process.ENV.PORT || 3333;
 
 const corsOptions = {
   origin: ["http://localhost:3000", "https://broadcast-messages.vercel.app"],
