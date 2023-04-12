@@ -9,7 +9,7 @@ const MessageController = require("./controllers/MessageController");
 routes.get("/videos", VideoController.index);
 routes.post("/videos", VideoController.store);
 routes.get("/messages", MessageController.GetMessages);
-routes.post("/messages", MessageController.SendMessage);
+routes.post("/sendMessages", MessageController.SendMessage);
 
 // routes.get("/", (res) => {
 //   res.send("deu boa");
